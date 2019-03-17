@@ -29,7 +29,7 @@ variable "service_subnet" {
 variable "talos_release" {
   description = "Release of Talos to use"
   type        = "string"
-  default     = "v0.1.0-alpha.18"
+  default     = "v0.1.0-alpha.19"
 }
 
 variable "libvirt_network" {

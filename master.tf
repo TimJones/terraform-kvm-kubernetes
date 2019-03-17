@@ -48,7 +48,6 @@ resource "libvirt_domain" "master" {
   cmdline {
     "console"                    = "tty0"
     "console"                    = "ttyS0,9600"
-    "ip"                         = "dhcp"
     "consoleblank"               = "0"
     "nvme_core.io_timeout"       = "4294967295 "
     "talos.autonomy.io/userdata" = "cidata"

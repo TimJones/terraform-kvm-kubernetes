@@ -20,7 +20,7 @@ This is a Terraform module to install a Talos Kubernetes cluster on a KVM hostwi
 | cluster_domain | The cluster's DNS domain | "cluster.local" | "k8s.example.com" |
 | pod_subnet | The CIDR block used for pods | "10.2.0.0/16" | "172.16.1.0/24" |
 | service_subnet | The CIDR block used for Kubernetes services | "10.3.0.0/16" | "172.16.2.0/24" |
-| talos_release | Release of Talos to use | "v0.1.0-alpha.18" | "v0.1.0-alpha.15" |
+| talos_release | Release of Talos to use | "v0.1.0-alpha.19" | "v0.1.0-alpha.15" |
 | libvirt_network | Name of the libvirt netowkr interface to use | "default" | "virbr0" |
 | master_count | Number of masters | 1 | 3 |
 | master_cpus | Number of CPUs to assign to the masters | 2 | 4 |
@@ -70,7 +70,6 @@ module "talos_libvirt_bronze" {
 
   cluster_name = "bronze"
   kubernetes_cni_plugin = "flannel"
-  libvirt_network = "virbr0"
   master_count = 1
   node_count = 2
 }
